@@ -26,4 +26,5 @@ RUN apk add --no-cache --virtual .tool-deps $TOOL_DEPS $LIB_DEPS \
  && rm -rf $COMPOSER_HOME/cache \
  && apk del .build-deps
 
-CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
+#CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
+CMD ["/bin/sh"]
