@@ -27,4 +27,5 @@ RUN apk add --no-cache --virtual .tool-deps $TOOL_DEPS $LIB_DEPS \
  && apk del .build-deps
 
 #CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
+WORKDIR /var/www
 CMD ["/bin/sh"]
