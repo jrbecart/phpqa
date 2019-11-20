@@ -28,4 +28,6 @@ RUN apk add --no-cache --virtual .tool-deps $TOOL_DEPS $LIB_DEPS \
 
 #CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
 WORKDIR /var/www
-CMD ["/bin/sh"]
+COPY ./startup.sh /opt/startup.sh
+RUN chmod +x /opt/startup.sh
+ENTRYPOINT ["/bin/sh","/opt/startup.sh"]
