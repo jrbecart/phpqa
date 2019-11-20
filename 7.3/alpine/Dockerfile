@@ -29,5 +29,5 @@ RUN apk add --no-cache --virtual .tool-deps $TOOL_DEPS $LIB_DEPS \
 #CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
 WORKDIR /var/www
 COPY ./7.3/alpine/startup.sh /opt/startup.sh
-RUN sudo chmod +x /opt/startup.sh
+RUN chmod +x /opt/startup.sh
 ENTRYPOINT ["/bin/sh","/opt/startup.sh"]
